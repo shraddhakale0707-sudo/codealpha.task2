@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    /* Navbar */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#222;
+      padding:15px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+    }
+
+    nav h2{
+      color:white;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:20px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00adb5;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(to right,#00adb5,#007b83);
+      color:white;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:50px;
+      margin-bottom:10px;
+      animation:fadeIn 2s ease;
+    }
+
+    .hero p{
+      font-size:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background:white;
+      color:#007b83;
+      text-decoration:none;
+      border-radius:5px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#222;
+      color:white;
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:30px;
+      color:#007b83;
+    }
+
+    /* About */
+    .about{
+      text-align:center;
+      line-height:1.8;
+    }
+
+    /* Skills */
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap:20px;
+    }
+
+    .skill-box{
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .skill-box:hover{
+      transform:translateY(-8px);
+    }
+
+    /* Projects */
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .project-card{
+      background:white;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:scale(1.03);
+    }
+
+    .project-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:20px;
+    }
+
+    /* Resume */
+    .resume{
+      text-align:center;
+    }
+
+    /* Contact */
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:10px 0;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#222;
+      color:white;
+    }
+
+    /* Animation */
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:10px;
+      }
+
+      .hero h1{
+        font-size:35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>My Portfolio</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Hello, I'm Shraddha Kale</h1>
+      <p>Frontend Developer | PPT Maker | Student</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+
+    <div class="about">
+      <p>
+        I am a passionate Computer Science student and Frontend Developer.
+        I enjoy creating responsive websites and presentation designs.
+        I love learning new technologies and building creative projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">PowerPoint</div>
+      <div class="skill-box">Frontend Development</div>
+      <div class="skill-box">Basic Computer Skills</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <img src="https://picsum.photos/500/300?1" alt="Project">
+        <div class="project-content">
+          <h3>Calculator Project</h3>
+          <p>Responsive calculator made using HTML, CSS and JavaScript.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/500/300?2" alt="Project">
+        <div class="project-content">
+          <h3>Image Gallery</h3>
+          <p>Interactive image gallery with filters and lightbox.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/500/300?3" alt="Project">
+        <div class="project-content">
+          <h3>PPT Design</h3>
+          <p>Professional PowerPoint presentation templates and designs.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+
+    <div class="resume">
+      <p>Download my resume below</p>
+      <a href="#" class="btn">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact">
+      <p>Email: shraddhakale0707@gmail.com</p>
+      <p>Phone: +91 XXXXXXXXXX</p>
+      <p>City: Nashik, Maharashtra</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Shraddha Kale | Portfolio Website</p>
+  </footer>
+
+</body>
+</html>
